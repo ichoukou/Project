@@ -1,0 +1,163 @@
+.normal_center_container {
+  margin: 0 auto;
+  width: 1150px;
+}
+
+.ivu-layout {
+  background: #fff;
+}
+
+.ivu-tabs-tab-disabled {
+  color: black!important;
+  font-size: 20px!important;
+  font-weight: bold!important;
+  border-bottom: 5px solid #3D67C6 !important;
+}
+
+.ivu-card-head {
+  border-bottom: none !important;
+  padding: 14px 16px 0px 16px;
+}
+
+.ivu-card-head p,
+.ivu-card-head-inner {
+  border-bottom: 1px solid #e9eaec !important;
+  height: 35px;
+  font-size: 20px !important;
+}
+
+.cardTitleIco {
+  color: #3D67C6;
+  font-size: 28px;
+}
+
+.h80 {
+  height: 80px;
+}
+
+.lh80 {
+  line-height: 80px;
+}
+
+.tc {
+  text-align: center;
+}
+
+.text {
+  color: #444
+}
+
+.fn22 {
+  font-size: 22px
+}
+
+.fn30 {
+  font-size: 30px
+}
+
+.fn40{
+  font-size: 40px;
+}
+
+.red {
+  color: #F41D51
+}
+
+.orange {
+  color: #FF7935
+}
+
+.blue {
+  color: #207FE8
+}
+
+.green{
+  color: green
+}
+
+.lh40 {
+  line-height: 40px;
+}
+
+.pdl10 {
+  padding-left: 10px
+}
+
+.fl {
+  float: left;
+}
+.fr{
+  float: right;
+}
+
+.h200 {
+  height: 200px;
+}
+
+.h150 {
+  height: 150px;
+}
+.mt30{
+  margin-top: 30px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+
+.lh25{
+  line-height: 25px;
+}
+.tl{
+  text-align: left;
+}
+.white{
+  color: white;
+}
+.fn35{
+  font-size: 35px;
+}
+*{box-sizing: border-box; font-family: “Microsoft YaHei” ! important;
+}
+.sjwd>div>div{height:30px;}
+.sjzb>div>div{height:30px;}
+html,body{
+  background:#eaeaf4 !important;
+}
+@media screen and(min-width: 320px)and(max-width: 359px){
+  html{
+    font-size: 12.8px;
+  }
+}
+@media screen and(min-width: 360px)and(max-width: 374px){
+  html{
+    font-size: 14.4px;
+  }
+}
+@media screen and(min-width: 375px)and(max-width: 385px){
+  html{
+    font-size: 15px;
+  }
+}
+@media screen and(min-width: 386px)and(max-width: 392px) {
+  html {
+    font-size: 15.44px;
+  }
+}
+@media screen and(min-width: 393px)and(max-width: 400px){
+  html{
+    font-size: 16px;
+  }
+}
+@media screen and(min-width: 401px)and(max-width: 414px){
+  html{
+    font-size: 16.48px;
+  }
+}
+@media screen and(min-width: 750px)and(max-width: 799px){
+  html{
+    font-size: 30.72px;
+  }
+}
