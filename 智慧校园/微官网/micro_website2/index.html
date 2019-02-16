@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" />
+    <script src="http://webapi.amap.com/maps?v=1.3&amp;key=97f45697a0fcbbcb1213c79044fec73a&callback=init"></script>
+    <script type="text/javascript">
+        function init() {
+            var map = new AMap.Map('container', {
+                center: [117.000923, 36.675807],
+                zoom: 6
+            });
+            map.plugin(["AMap.ToolBar"], function() {
+                map.addControl(new AMap.ToolBar());
+            });
+        }
+
+        // (function($) {
+        //     $(window).on("load", function() {
+        //         $(".linkbox").mCustomScrollbar({
+        //             theme: "dark"
+        //         });
+        //     });
+        // })(jQuery);
+    </script>
+
+    <title>首页 - 烟台第一小学</title>
+
+</head>
+
+<body>
+    <div id="app-box"></div>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>
