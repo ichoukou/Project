@@ -1,42 +1,15 @@
 <template>
   <div >
-
-<div class="swiper-container bannerpc-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="(item,index) in bannerList">
-          <div class="banerimg"><img :src="item.img"></div>
-          <p class="swiperTitle">{{item.title}}</p>
-        </div> 
-      </div>
-     <div class="swiper-pagination swiper-pagination-white"></div>
- <div class="swiper-button-next swiper-button-white"></div>
-      <div class="swiper-button-prev swiper-button-white"></div>
-    </div>  
-
- <!-- <Carousel autoplay v-model="value2" loop>
-        <CarouselItem>
-            <div class="demo-carousel">
-              <img src="http://www.qhfx.edu.cn/app/upload/image/indexphoto/2e7433ddbfb358c05d88f3ed983cd262.jpg">
+<div style="width:100%;height:auto;position:relative">
+ <Carousel autoplay v-model="value2" loop :autoplay-speed="autoplaySpeed" height="450px">
+        <CarouselItem v-for="(item,index) in bannerList">
+            <div class="demo-carousel" style="position:relative;border:1px solid #000">
+              <img :src="item.img" style="width:100%">
+                   <p class="swiperTitle">{{item.title}}</p>
             </div>
         </CarouselItem>
-        <CarouselItem>
-            <img src="http://www.qhfx.edu.cn/app/upload/image/indexphoto/2e7433ddbfb358c05d88f3ed983cd262.jpg">
-        </CarouselItem>
-        <CarouselItem>
-          <img src="http://www.qhfx.edu.cn/app/upload/image/indexphoto/2e7433ddbfb358c05d88f3ed983cd262.jpg">
-        </CarouselItem>
-        <CarouselItem>
-            <img src="http://www.qhfx.edu.cn/app/upload/image/indexphoto/2e7433ddbfb358c05d88f3ed983cd262.jpg">
-        </CarouselItem>
-    </Carousel> -->
-
-
-<!-- <div style="width:100%;height:100px;border:1px solid #000">
-11111111111
-</div> -->
-
- 
-
+    </Carousel>
+</div>
     <div class="mingyan"></div>
     <!-- 通知公告 -->
     <div class="swiper-container noticepc-container">
@@ -166,16 +139,9 @@
 import Swiper from 'swiper';
 export default {
   data() {
-    
     return {
             autoplaySpeed: 5000,
       value2: 0,
-      banner:[  { img: '2e7433ddbfb358c05d88f3ed983cd262.jpg', title: '清华附小2018-2019学年度第一学期开学典礼' },
-                { img: 'e786890e2dfe9b03a719de3792500321.jpg', title: '难忘师恩，清华附小教师节献礼' },
-
-        { img: '022f4cc15b0c17f1a648c21790203e02.jpg', title: '清华附小2018-2019学年度第一学期开学典礼' },
-        { img: '97026657bb33f79dc7d68f6edf042bfb.jpg', title: '清华附小2018-2019学年度第一学期开学典礼' },
-        { img: '7d4466fd7dafad64de30ffb5523939ae.jpg', title: '清华附小2018-2019学年度第一学期开学典礼' },],
       bannerList: [
                 { img: 'http://www.qhfx.edu.cn/app/upload/image/indexphoto/2e7433ddbfb358c05d88f3ed983cd262.jpg', title: '清华附小2018-2019学年度第一学期开学典礼' },
                 { img: 'http://www.qhfx.edu.cn/app/upload/image/indexphoto/e786890e2dfe9b03a719de3792500321.jpg', title: '难忘师恩，清华附小教师节献礼' },
@@ -235,7 +201,7 @@ detail(title){
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
       spaceBetween: 30,
-      effect: 'fade',
+      // effect: 'fade',
       onSlideChangeEnd: function (bannerpcswiper) {
         bannerpcswiper.update();
         bannerpcswiper.startAutoplay();
@@ -271,14 +237,7 @@ height:100%!important;
   top: -30px !important;
  height:450px!important;
 }
-.bannerpc-container .banerimg{
-   height:450px!important;
-}
-.bannerpc-container .swiper-slide{
-width: auto!important;
 
-}
-.bannerpc-container  slider
   .honory:nth-child(2){
     margin:0 1.25%!important;
   }
@@ -333,7 +292,7 @@ width: auto!important;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  margin-top: -30px;
+
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 0px;
@@ -343,7 +302,7 @@ width: auto!important;
   z-index: 2;
   font-size: 40px;
   right: 100px;
-  bottom: 50px;
+  bottom: 200px;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166, 0, 0, 0, 1);
   position: absolute;
   color: #fff;

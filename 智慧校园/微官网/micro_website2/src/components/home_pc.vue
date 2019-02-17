@@ -2,7 +2,7 @@
   <div>
     <header>
       <div class="headerContainer">
-        <div class="headerLogo"><img src="http://www.qhfx.edu.cn/app/static/images/logo-white-260X53.png"></div>
+        <div class="headerLogo" ><img src="http://www.qhfx.edu.cn/app/static/images/logo-white-260X53.png" ></div>
         <ul class="navlist">
             <li @click="shouye()">首页</li>
             <li style="position:relative" @mouseenter="enter()" @mouseleave="leave()">学校概况
@@ -99,6 +99,7 @@ header {
 .headerLogo {
   padding-top: 20px;
   float: left;
+  height:100px;
 }
 .navlist {
   float: right;
