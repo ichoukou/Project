@@ -1,1 +1,0 @@
-var WeUI_mShowBanner = [{title: "显示",value: "1"},{title: "隐藏",value: "0"}];
