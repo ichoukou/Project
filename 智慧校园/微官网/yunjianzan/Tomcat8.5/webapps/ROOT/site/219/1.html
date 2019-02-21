@@ -1,0 +1,504 @@
+<!DOCTYPE html><html lang="zh-cn"><head>
+<meta charset="utf-8">
+<title>新建页面</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script src="http://res.weiunity.com/template/xuexiao1/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<!-- import Vue.js -->
+<script src="//vuejs.org/js/vue.min.js"></script>
+<!-- import stylesheet -->
+<link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+<!-- import iView -->
+<script src="//unpkg.com/iview/dist/iview.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+<style type="text/css">
+<!--全局css-->
+* { margin: 0; padding: 0;  word-break: break-all; word-wrap: break-word;box-sizing: border-box;}
+body,html {width: 100%;height: 100%;position: relative;}
+img {border: 0; max-width: 100%;}
+a {text-decoration: none;outline: none;}
+input,textarea {resize: none; outline: none;border: 0;}
+.clear {clear: both;}
+	<!--本业css-->
+.navlist {float: right;}
+.navlist li {float: left;margin-left: 25px;color: #fff;font-size: 16px; list-style:none;cursor:pointer;}
+.navlist>li>a{color:#fff;}
+#show-list {position: absolute;z-index: 999; top: 66px; left: -40px;}
+#show-list li {width: 90px; height: 40px;font-size: 14px; line-height: 40px; background:#fff;color:rgba(102, 51, 153, 0.8); border-bottom: 1px solid #bbb; padding-bottom: 0; text-align:center;}
+.intro li>a{color: rgba(102, 51, 153, 0.8)}
+ .swiper-container {width: 100%;height: 100%; }
+.swiper-slide {background-position: center;background-size: cover;}
+.mingyan {background-color: #e7e7e7;background-repeat: no-repeat; background-attachment: scroll;background-position: center center;padding-top: 50px;  padding-bottom: 50px; margin-bottom: 0px; background-image:url(http://www.qhfx.edu.cn/app/upload/image/top_img/dianji03.png);}
+ .noticepc-container { width: 1200px!important; height: 30px!important;margin-top:20px;}
+	.noticepc-container .swiper-slide { text-align: center; background: #fff;  font-size:15px; display: -webkit-box; display: -ms-flexbox; display: -webkit-flex;  display: flex!important;;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        height:30px!important;
+    }
+
+	.row { margin-top: 20px;}
+.shadow { box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.2); padding: 20px;}
+.Container { max-width: 1200px; margin: 0 auto;}
+.newContainer {  width: 750px;  float: left;}
+.newImg {  float: left;}
+.news {float: right;}
+.news li {height: 32px;line-height: 32px; font-size: 15px;
+}.newTime {margin-left: 20px; color: #bbb;}
+.newtitle { padding: 0 0 15px 0;
+}
+.newtitle p:first-child { float: left;}
+.newtitle p:nth-child(2) { float: right;}
+.newnName {font-size: 18px; font-weight: 700; color: #3e64c1;}
+.more { color: #2d8cf0; background: 0 0; text-decoration: none; outline: 0; cursor: pointer; transition: color 0.2s ease;}
+.partyContainer { float: right;margin-left: 20px; width: 430px; height: 270px;}
+/* 学生园地/教学科研/德育之窗  */
+.students{width: 380px;float: left;}
+.education {margin: 0 30px;}
+.xsyd > div:nth-child(2) { margin: 0 30px;}
+/* 平安校园/家校互动 */
+.safeCamp{float:left;width:585px;}
+.safeCamp:first-child{margin-right:30px;}
+.safeCamp .newTime{margin-left:120px;}
+.safeImg{}
+.safeImg img{border-radius:4px;width:160px;height:100px;}
+.safeImg{ float:left;}
+.safeDes{ width:350px;float:right;}
+.safeDes>p:first-child{font-size:19px;font-weight:bold;margin-bottom:15px;}
+.safeDes>p:last-child{color:#bbb;font-size:15px;}
+.teachers{margin-top:15px;}
+.line{border-top:1px solid #bbb;margin-bottom:15px;}
+	.honory {  width: 19%; position: relative;margin-bottom: 10px; float:left; }
+.honorImg { height: 150px; }
+  .honoryTitle {position: relative;}
+.honorName {position: absolute; width: 100%; height: 20px; background: rgba(0, 0, 0, 0.4); bottom: 5px; font-size: 0.8rem; color: #fff;  text-align: center;}
+.honorImg {width: 100%; border-radius: 4px;}
+.yqljimg{float:left;width:15%;margin-left:2%;}
+.yqljimg:first-child{ margin-left:0;}
+.yqljimg img{width:100%;}
+  .honory:nth-child(2){ margin:0 1.25%}
+  .honory:nth-child(4){ margin:0 1.25%}
+</style>
+	</head>
+<body>
+<div>
+	<!--头部-->
+    <header style="width: 100%;background: rgba(102, 51, 153, 0.8) url() repeat top center scroll;">
+      <div style="width: 1200px; height: 100px; line-height: 100px; margin: 0px auto;">
+        <div style="padding-top: 20px; float: left; height: 100px;"><img src="http://www.qhfx.edu.cn/app/static/images/logo-white-260X53.png" style=""></div>
+        <ul class="navlist" style="float: right;">
+			<li @click="shouye()" style=""><a href="index.html">首页</a></li>
+            <li style="position: relative;" id="xxgk">学校概况
+        
+								<div id="show-list" style="display: none;">
+					<ul class="intro">
+						<li @click="xxry(2,'学校荣誉')" style=""><a href="xuexiaorongyu.html" style="">学校荣誉</a></li>
+						<li @click="detail(21,'组织机构')" style=""><a href="zhuzhijigou.html">组织机构</a></li>
+						<li @click="detail(22,'校风校训')"><a href="xiaofengxiaoxun.html">校风校训</a></li>
+						<li @click="detail(23,'学校简介')"> <a href="xuexiaojianjie.html">学校简介</a></li>
+             <li @click="detail(24,'走进校园')"> 走进校园</li></ul>
+				</div>
+        </li>
+			<li @click="menus(2,'校园动态')" style=""><a href="xiaoyuandongtai.html">校园动态</a></li>
+            <li @click="menus(3,'党建之窗')" style="">党建之窗</li>
+            <li @click="xxry(3,'教师发展')">教师发展</li>
+            <li @click="menus(5,'学生园地')">学生园地</li>
+            <li @click="menus(6,'教育科研')">教育科研</li>
+            <li @click="menus(7,'德育之窗')">德育之窗</li>
+            <li @click="menus(8,'平安校园')">平安校园</li>
+            <li @click="menus(9,'家校互动')">家校互动</li>
+        </ul>
+        <div style="clear:both;"></div>
+      </div>
+    </header>
+		<!--banner图-->
+	<div>
+    <div class="swiper-container swiper-container-horizontal swiper-container-fade banner-container">
+        <div class="swiper-wrapper" style="transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" style="height: 450px; width: 1753px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;" data-swiper-slide-index="2">&gt;<img src="http://www.qhfx.edu.cn/app/upload/image/indexphoto/022f4cc15b0c17f1a648c21790203e02.jpg" style="width:100%;"></div>
+            <div class="swiper-slide swiper-slide-active" style="height: 450px; width: 1753px; opacity: 1; transform: translate3d(-1753px, 0px, 0px); transition-duration: 0ms;" data-swiper-slide-index="0"><img src="http://www.qhfx.edu.cn/app/upload/image/indexphoto/2e7433ddbfb358c05d88f3ed983cd262.jpg" style="width: 100%;"></div>
+            <div class="swiper-slide swiper-slide-next" style="height: 450px; width: 1753px; opacity: 0; transform: translate3d(-3506px, 0px, 0px); transition-duration: 0ms;" data-swiper-slide-index="1">&gt;<img src="http://www.qhfx.edu.cn/app/upload/image/indexphoto/e786890e2dfe9b03a719de3792500321.jpg" style="width: 100%;"></div>
+            <div class="swiper-slide swiper-slide-duplicate-prev" style="height: 450px; width: 1753px; opacity: 0; transform: translate3d(-5259px, 0px, 0px); transition-duration: 0ms;" data-swiper-slide-index="2">&gt;<img src="http://www.qhfx.edu.cn/app/upload/image/indexphoto/022f4cc15b0c17f1a648c21790203e02.jpg" style="width:100%;"></div>
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" style="height: 450px; width: 1753px; opacity: 0; transform: translate3d(-7012px, 0px, 0px); transition-duration: 0ms;" data-swiper-slide-index="0"><img src="http://www.qhfx.edu.cn/app/upload/image/indexphoto/2e7433ddbfb358c05d88f3ed983cd262.jpg" style="width: 100%;"></div></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white swiper-pagination-clickable swiper-pagination-bullets" style=""><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white swiper-button-disabled"></div>
+    </div>
+    <div class="mingyan"></div>
+	</div>
+	<!-- 通知公告 -->
+    <div class="swiper-container noticepc-container swiper-container-vertical swiper-container-fade">
+        <div class="swiper-wrapper notice-wrapper" style="transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="1" style="height: 30px; transform: translate3d(0px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
+              <div style="width:2%;text-align:left;"><img src="data:image/png;base64,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" style="width:28px"></div>
+              <div style="width:6%;">通告通知</div>
+              <div style="width:44%;color:#bbb;cursor:pointer" @click="detail()">征稿启示</div>
+              <div style="width:45%;height:20px;line-height:25px;color:#bbb;">2017.02.01</div>
+              <div style="width:3%;color: #2d8cf0;cursor:pointer" @click="more('通告通知')">more</div>
+              </div>
+			
+            <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="height: 30px; transform: translate3d(0px, -30px, 0px); opacity: 1; transition-duration: 0ms;">
+              <div style="width:2%;text-align:left;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAW2klEQVR4Xu2df5AcxXXH35u9kxQCud01Jsb+AwndLNjmhzCuAleIkeKEJE4ZJKhyEmMHKU4Vvh1+SA6EciqYI4lTLhOXBNyMoFK2RIxjO0UFEf+o2LhKwgkkTmIjIDZm58QpBCdV4NpZQWy4u715qdm7A3HRTvfMvOmdm33373a/7vd9/bmZft3TjSB/ooAo0FcBFG1EAVGgvwICiIwOUSBGAQFEhocoIIDIGBAF0ikgT5B0ukmtIVFAABmSQIub6RQQQNLpJrWGRAEBZEgCLW6mU0AASaeb1BoSBQSQIQm0uJlOAQEknW5Sa0gUEECGJNDiZjoFBJB0ukmtIVFAABmSQIub6RQQQNLpJrWGRAEBZEgCLW6mU0AASaeb1BoSBQSQIQm0uJlOAQEknW5Sa0gUEECGJNDiZjoFBJB0ukmtIVFAABmSQIub6RQQQNLpJrWGRAEBZEgCLW6mU0AASaeb1BoSBQSQIQm0uJlOAQEknW5Sa0gUEECGJNDiZjoFBJB0ukmtIVFAABmSQIub6RQQQNLplnut6t6Z9VY4fxsBbkWEatQgEXQQ6EBo4X2dCftQ7p2QBkAAKeAgqO/1bwOCybiuEcABmh3Z0dm1oVNAF0rTJQGkQKGs7p6p4truPgTYqtMtIjpMc6NbBBIdtdKVEUDS6cZeq+q2NiHAPkTclMS4QJJEreRlBZDkmrHXqHrTW5Fo3/JcI2kDBHAoaNpbktaT8moFBBC1RrmWqLqtGy3EPVkbCQF2dZp2ZjtZ+1G2+gLIACNad1v7AHE7RxeiDBfNjWyQ+QiHmq/bEEB49dSy1puMr5k/mHS+oTIuTxGVQsl/F0CSa5apRm8yjvAgAq7XNUQAxwDoKAKeH1eHgI4GzcYGXbtSTq2AAKLWiK1Emsk4AT1BBNvBGu0gdQ8jwFhch0KiCzpO4zBbp4fckABiaABU3dZ2C3FfkuaI4CGaG9m+PK+ou/4kINwWC4hM1pNIrCwrgCglyl4g1WSc8M62M77z+NajuYu1thvEvmYRPBQ4ttZCY3bPym9BAMkxxklXxpe7EhLt6DiN/SfqWs3zDyHApf26TQCPBE17c45uDZVpASSncKfJVEWTcSLaHDeHEEByClgfswJIDnovbhvBg0lWxnuTcRzd2pnYcDSuSwJIDgGLMSmAMOudKlO1YjIugDAHJYM5ASSDeCurpslUAdB97WZDezVdniCMAdMwJYBoiKRTpO75uwHgDVknVb24yXi/ugKISlXe3wWQjHr2Uq9r5ncn2VPVm4wDbu80xw8kbX61AvILU62LRhDuBMSLCCAAoEeJ4NaiL2oKIElH6HHl88pUlW0OUt3rb7YIDp7IrxDxys7E+IMZwpBrVQEkpbxpPnDqZapmRzdn2XG7Gp8gNdd/EhHO7Sc1EV4fOONTKUORazUBJIW8qdK4CTJVZXqC/Lw785a12P0flcxFfZIIIKrIrfg9ylQh4O4kaxxJM1VlAmTs7qMbKpX5Z5UyE7zSJdry0nWN7yrLGiwggCQQO00aN02mqkyARL7UXP8oIpyhkrq3rR/xkmBi/D9UZU39LoBoKp10w2GWTFXZABlz/csqCN/UkTr6pgUqlU3BtRuP6ZTPu4wAolA4dRpXsacqbWBX4yS99xTxWp9BwJt1/CaCrwaOfblO2bzLCCAxCqdL4+rtqUob2NUKSORv3fM/DgCf1fKd8M/azvgntcrmWEgA6SPuoNK4qlivZkAWnyT+HyPAp1R+Rr8T0geCicbXdMrmVUYAOYGyadK4nJmqss1BVvpT9/zPA8AO1aCOTmp51QrPeWXirB+ryub1uwCyQtk0u3HhBF//5RWw1f4EWdal5vkHEUD5YRcBPBo07Uvy0lNlVwA5TqEipHFVASsLIKfc+8ypowv4JACervIZCG9qO+N6cxelsWQFCgNI9FpjWXgFhLSeUP9InGTuxpfW+Y+2bCGvNK7Kn7IAEvnZizniPwPAOpXfc0Tv+F+n8bSqHPfvAwek6k1fgxBOJjkniluEpPZ0Po1NalO3fJkAiXwe29u6qkL4gMr/6JDuwGlcoCrH/fvAAElzgBq382ns6X4am8a2Tp2yARL5XHdb0Tb4G1T+E9GnAqfxJ6pynL8PBJB0+5k43U5ni2M3brqWX69VRkDgXhqtd/0nAfHsOH0IaB4qlfHg2o3PZdVRt75xQOK+DdDt9GDKJfs0Nq8+lhKQaH3k7iPngrXwfUQcidWO6MG207gyL31X2jUKSHTvHobdx5PthDUlRez/rkTfjefZ47IC0nvV8vzbAUC5ek6LGxofzVPnZdtGAdHNfZtwXLcN7t24uu32K1dmQOBvf7Cm9pPRpxHwzNh/VwTfDxz7wqxa6tQ3Bshqe7VanIzjzqLdJltqQKKs1tSR91Ws8NuqwUuIvxtMjH9ZVS7r78YAqbn+AUS4QqfD0fGZOuXYy/SuWYbDoTWyX3WAG3vbmgbLDkgkQ831v4IIH4x/itBM4DRinzSaksYWMwlIoJp7rDzNnMPBstkYBCC97TdA10Rre0h0NAS4M8/TSE66+7m3rqvM+gBwUlz8QoTf60zYX8gzxkYA0Xm9kkOX9cJsGpC+H4ohTLYn7GhSncuf5oTdbzftRi4dWDJqBhBveqsFFHu0S4iwpWjv+3kKn9a2SUCU/9iI9redhnJXbipf3RdOruOxIwBwWuxTBHBbmvPFdPtkBBCdi1/aTdtIX3SFKWo5k4DUvdZ+AIxerfr/5biTue5O3wRId8TPReBg4Ni/kle8jAxKAYQvfCYBUbW17FVuqXD3hZNreOw5BKjFKZjnRkYBhG/sGrGkGrScc7m6O70HkG7UcSzM6VWn7k7/KSDdGvsUAdgbNO2mTj+TlhFAkio24PImAVnajv64jsu9e9qBtnBnt07eO33aaEjPIcLamH78rL124S3w0bNf1ulrkjICSBK1ClDWJCCRu0k+Iou2pNPc6JYsR6ueSOKq5/+VBfAHirnQzW1n/C+5QySAcCuasz3TgCSFJI/Pj092W29fg/jD+NesfO6IF0ByHtDc5gcBSFJI8kjZ17zWdxDwl+P0zKNdAYR7BOdsb1CARG7pTtqj0xFpdvQCzletmutfjQj3xz5FCKYCx76eMwQCCKeaBmwNEpDIPe09dQS3tx17klOSmuvHb1ci+u+203gbZ5sCCKeaBmwNGpDF0ya7h3UOow5xZAPnps+a538ZAX47TuZuSBdznhAvgBgY1JxNDBqQpflIdBqJRvqX9yvMqtfaYQFGh871/QuBbu00G3/OpbkAwqWkITtFAGRxPuJPAsJtKrc5nyKLZ2lZL8a2SfRw22lcpuqX7u8CiK5SBSlXFECW5iMa937wPkVqXuswAp4fE45X2xPjJwEicYRMAOFQ0aCNIgESfSei2qUdScP5FKl5/qcR4JbYeQhWLnpp4sx/5QiLAMKhokEbRQKk9xTx/EMIcGn8aw9fRku5Bb8HJN3YmWjcxREWAYRDRYM2VAOSc7Oijls6AzZaFwmajQ069nTK1D3/p7FfGzJ+pyKA6ESkQGWKBsjiU0Q5LwDOVe6a6z+GCO/pFxYieCpw7PM4wiaAcKho0EYRAdHb0Mg3Wa+7/ucA4fdjAAmDF8fXwiR2s4ZGAMmqoOH6RQRkaS4SnQgz1nfQMr5m1d3pPwSk2J27tGCdF1y/8ams4RFAsipouH5RAdH5PJcrm1Xzpn8Tgb4RJz3X9W0CiOEBnrW5ogKik/INAXZ1mvaerBpUp549w7IWjsYCAnBd0LTdrG0JIFkVNFy/sIDsnqlaa7tBfLoX72w74zs5JKu5/qtxXxkS0B1Bs/FHWdsSQLIqaLh+UQHRyWZxpqBrrv89RHhX/zkP3B807Y9kDY8AklVBw/WLDIjOPITreKe62/o2IL6vfyaLvhE4jd/KGh4BJKuChusXGhCNDYxcgNS81tcQsC8ABPBY0LR/KWt4BJCsChquX2RAdFbVQ6ILOE4+qXutBwDwqhj5f9hu2u/MGh4BJKuChuuvekCYjpitef4XEODD/ecgPNtbBBDDAzxrcwLIooIaq+n/GTj2+qx6CyBZFTRcXwBZFLzm+i4i9D1NkWuDpABieIBnbU4AWVSw6vmftQA+HpPFYrlgRwDJOmIN1xdAlp4gnu8hwER/QGA6cGw7a3gEkKwKGq5faEDc1nYLcV+cJFz7sepu6+8AcVtMW99rN+13Zw2PAJJVQcP1iwyIzkEObOsgim9CgOnwBgHE8ADP2lyhAVFcuEMAx4KmXc2qQW+S7rVmELBvlooAvhI07d/J2pYAklVBw/WLDIjGoH0kaNqbOSSre/4rALCu7xwEwA2a9nVZ2xJAsipouH5RAanunVlvUXcmVg6m69pq9x4Zw4WwE9cWEXwicOxPZw2PAJJVQcP1CwuIzgSd6RaqU7xnzxqFhR8pAPlw4NhfzBoeASSrgobrFxUQnUOtuTJYY/e0fq0S4rdiAYHKe4Pmmf+YNTwCSFYFDdcvIiDRgdaqj6WIgGXrx+IE3f8EAvyFiXSyAGJ4gGdtrpCAaLxecd48VfP8hxDg8r5aErzSduyTsmod1RdAOFQ0aKOIgKiyV5E8XNvcl1K8LyLgqX0zWET/FDiN2NuodEMmgOgqVZByRQNE50wszterk+5+7q3rKrM/NpEtkydIQQZ9km4UDZCa23ocETfFD1jWs3k/YhH8dez8A3B7pzl+XxJd+5WVJwiHigZtFAkQnaN+eq9XsyM1rvsKVR9KRe1xHRonTxCDA5urqaIA0ruKbe3843HbPRZ95jtytDf/cP0XEOHNfecfjNtZBBCuUWvQTlEA0dmY2Ht6MN5TWL3n2fOtcOFwnNwE8DdB076aKyTyisWlpCE7RQCk6rYGckdhzfNvQYDY7SNEwLKCvhxOI4DoZDo404CGxupAmhk0IIu33M4fVE3Mo527hCObOG+5rbutpwHx7JjXK8IuVNs32C9xBccMIHv9zRbBwfhMB9+xlFziFNHOoAGpu9N7AOlGpTbM96SPedMXVoD+PX4M0XfbTuNiZd8SFDADiMZWhN77KtHOjtO4M0H/h67oIAHRzVpF6x40N7KJK3PVm5x7rbsQ8HrFP9mb28547LUISQeMEUAWHdS4yy7KeRAdRgsPJHUkbfmQ8ChQ+ATHYWZp+5CknkpHzvNvj+9XNO9AwIOIoPzgKWTatfta+5M0Unvz9ItxbRNB2B0Jf/Hla8/6SRI9VWWNAaIzD1F1Ns/fCeAQzY5s4/yvl0d/BwGIfko3+gcHDwWOvZXT95rrX40I9ytsfrPdtH+Ds93IljFAek8R19e4V5vbRX17RNAhoC1FfpoMAhCt1fLe05//1Wrp7eMpBDgnLpJE9KHAaXxJP9p6JY0CovsOq9f1fEoVHRLTgOiud/TmkEzHih4f2THvyK9WIHw4fu5BP20v4JvgBnuWe1QYBSTqfBLBuZ3VtbcEya6O09ivW8dUOZOA6Hzn8ZrfzFmrZbt1z/8HAPj1+KcHeIFjO3nEwDggPUgUp1/k4WgamyHRjqJBYhQQnfR8T1je7STLsardfeRcrIRPqmLXtazGSx/b6KvKpfl9IIBEHS36pP01MREm2xP27WnEzaOOUUA0VswJ6AmaHd2cR3Kj5ra+jojvj3+9gm+1HTv2CZMlDgMDpAdJ7ySM+UkAvCaLE7nXJdrfdho7cm9HowGTgETdiUus9FbLZ0fW5wFHfcp/D1jwmEoSrtts+7UzUECWOxWBAtTdigBRenBT3H3bKsHy+p0ADtDsyI48BkOSPpsGpN++qx4cRJvzyvip7iDsvdgBPRs0GxuT6Je0bCEASdppjvKLuf3uAQS4VNdetIhJc6NbBgmJaUCWXoejRcJJQNgc/fOK1joIaDIvOKpT/hWWBcrFYgKaCJqNe3Tjl6bc0AKyLFbShEEPEmt0G+cmvCSBGwQgSfqXuWy0an6a/wwCnhlni4hmghftcZjEMHObMQaGHpBIm+SQDG5BseyA1N3pmwDpDtWg597WXug5iEoME78nzar11kos2NaZsA+Z6N9yG2UG5JSp5980av1sBgBPideUnmlP2G8HRMpbe3mCHKdwUkiiqqbXSsoMSN3zPw8AymwhEVweOPZX84Yjsi+ArFA5usoYCaLJ+5huAExu0y8rIGP3HHl3JQz/TaU5EX0ncBraiRWVPdXvAsgJFOpt7UY8lAQSMLRWUkpA7qXR+oL/FACeFTsxB5rvhpVzXr5uY0s1sLl+F0D6KBmtzSDNH0DA87XFJtofzo3uyjMNXEZAdL9SJMLPBM74LdrxYCgogMSIuPQdxKEkkOS9VlI2QKpTrfdaFj6iGssE8F/Bz400YMeGV1VlOX8XQBRqLh5S0N2PCFfoCt+DBCDa6Bh7RI2uvePLlQqQz/3olPqs9QwAnq7SIkS8sjMx/qCqHPfvAoimokVZKykTIHWv9QAAXqUKQR5fKaraXP5dANFVKsW3LL21EsQdnea4ctuEbjfKAkjVm77eArpL5TcBBN1K2OD+1lzVrgCiq9CKcoNeKykDIGNT/rssi/4FAUdVYQgBrug07b9Xlcvrd3mCpFA2+nQYgfYnSgMD7Gk37V0pmntDldUOyOIFnAs/AMC3qbXI50MsdbuvlxBAkqh1XNlBrZWsekB0PoKKdCZ4vr1u4R3w0bNfThkilmoCSAYZ06yVZE0Dr2ZAalNH3o9W+HUdyQnxkmBi/FGdsnmWEUAyqpt6rSTllvlVDYjqbsGlWBDAdUHTdjOGhqW6AMIg4+LpH/N7knw6nPZ4odUMSN3zo7N1L4yXfPDzjuP7J4AwALJsIuVaSaLjhVYzIDXP/yICfKif5ATweHDq3MXwwXfOMYYlkykBJJN8/79y3mngVQ2I638AEU6Yso3WO7AL57VvsJ9nDkkmcwJIJvlOXDmCBBH3JEoDa+4GXs2ARGpVPf+TFsAbjlGK4Agt67JjH9sYf71BDrFSmRRAVAql/D1NGljn5JTVDkgkZ3SkD1m0HQhPJ8SHFyoLXxrUSrkqvAKISqEMvy9CAvsT7waOyXCVAZAMkhqvKoDkLHm6NHD/QyFqXmsm7mbZvO4HyVmmwpoXQAyEJkMa+A0ZruhzYPVVdnB727EnDbg1FE0IIAbDrPvl3IouvbaHS+eeDvbbnQzqU8SmBBDDUUmTBo4m70jUAcTtcd3N86xcwzIVpjkBZAChSHNyil43i7UKrdfnYpcSQAYUn6VLMQ8gwhlcXQhxZMOgjkTl8qFodgSQAUYkTYarf3fl6ZFHKAWQPFRNaDPpHq6V5mXukVDwBMUFkARi5Vm06vk7LYDdadqQzFUa1fTqCCB6OhkpleZTXtNnAxsRokCNCCAFCkbUFd3tKUs3PO0s2iWjBZMzc3cEkMwS8hvorbyvWZgEpBtPbJ3uC3F0UjJW/NqvtCiA5K9x6hYiUGDN/FYLcH1kJAQ6CnOjB/I8+zd1Z0taUQApaWDFLR4FBBAeHcVKSRUQQEoaWHGLRwEBhEdHsVJSBQSQkgZW3OJRQADh0VGslFQBAaSkgRW3eBQQQHh0FCslVUAAKWlgxS0eBQQQHh3FSkkVEEBKGlhxi0cBAYRHR7FSUgUEkJIGVtziUUAA4dFRrJRUAQGkpIEVt3gUEEB4dBQrJVVAAClpYMUtHgUEEB4dxUpJFRBAShpYcYtHAQGER0exUlIFBJCSBlbc4lFAAOHRUayUVAEBpKSBFbd4FBBAeHQUKyVVQAApaWDFLR4FBBAeHcVKSRUQQEoaWHGLRwEBhEdHsVJSBQSQkgZW3OJRQADh0VGslFQBAaSkgRW3eBT4P0/ftG5s/Pz6AAAAAElFTkSuQmCC" style="width:28px"></div>
+              <div style="width:6%;">通告通知</div>
+              <div style="width:44%;color:#bbb;cursor:pointer" @click="detail()">面向全社会招聘教师</div>
+              <div style="width:45%;height:20px;line-height:25px;color:#bbb;">2017.2.1</div>
+              <div style="width:3%;color: #2d8cf0;cursor:pointer" @click="more('通告通知')">more</div>
+              </div>
+			
+			   <div class="swiper-slide swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="1" style="height: 30px; transform: translate3d(0px, -60px, 0px); opacity: 0; transition-duration: 0ms;">
+              <div style="width:2%;text-align:left;"><img src="data:image/png;base64,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" style="width:28px"></div>
+              <div style="width:6%;">通告通知</div>
+              <div style="width:44%;color:#bbb;cursor:pointer" @click="detail()">征稿启示</div>
+              <div style="width:45%;height:20px;line-height:25px;color:#bbb;">2017.02.01</div>
+              <div style="width:3%;color: #2d8cf0;cursor:pointer" @click="more('通告通知')">more</div>
+              </div>
+			
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="height: 30px; transform: translate3d(0px, -90px, 0px); opacity: 0; transition-duration: 0ms;">
+              <div style="width:2%;text-align:left;"><img src="data:image/png;base64,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" style="width:28px"></div>
+              <div style="width:6%;">通告通知</div>
+              <div style="width:44%;color:#bbb;cursor:pointer" @click="detail()">面向全社会招聘教师</div>
+              <div style="width:45%;height:20px;line-height:25px;color:#bbb;">2017.2.1</div>
+              <div style="width:3%;color: #2d8cf0;cursor:pointer" @click="more('通告通知')">more</div>
+              </div></div>
+    </div>
+	  <!-- 内容 -->
+    <div class="Container">
+      <div class="row">
+        <!-- 校园新闻 -->
+        <div class="newContainer shadow">
+          <div class="newtitle">
+            <p class="newnName">校园新闻</p>
+            <p class="more" @click="more('校园新闻')">more&gt;&gt;</p>
+            <div class="clear"></div>
+          </div>
+          <div>
+            <div class="newImg"><img src="http://www.qhfx.edu.cn/app/upload/month_1901/thb_238178201901041758258656.jpg"></div>
+            <ul class="news">
+              <li>
+                <span @click="detail('校园新闻')">烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+                <span class="newTime">2017.02.03</span>
+              </li>
+				      <li>
+                <span @click="detail('校园新闻')">烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+                <span class="newTime">2017.02.03</span>
+              </li>
+					      <li>
+                <span @click="detail('校园新闻')">烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+                <span class="newTime">2017.02.03</span>
+              </li>
+					      <li>
+                <span @click="detail('校园新闻')">烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+                <span class="newTime">2017.02.03</span>
+              </li>
+					      <li>
+                <span @click="detail('校园新闻')">烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+                <span class="newTime">2017.02.03</span>
+              </li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <!-- 党建之窗 -->
+        <div class="partyContainer shadow">
+          <div class="newtitle">
+            <p class="newnName">党建之窗</p>
+            <p class="more" @click="more('党建之窗')">more&gt;&gt;</p>
+            <div class="clear"></div>
+          </div>
+          <ul class="news">
+            <li>
+              <span v-else="" @click="detail('党建之窗')">烟台一中高一语文组举办2018年度硬笔书法</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			     <li>
+              <span v-else="" @click="detail('党建之窗')">烟台一中高一语文组举办2018年度硬笔书法</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			     <li>
+              <span v-else="" @click="detail('党建之窗')">烟台一中高一语文组举办2018年度硬笔书法</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			     <li>
+              <span v-else="" @click="detail('党建之窗')">烟台一中高一语文组举办2018年度硬笔书法</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			  	     <li>
+              <span v-else="" @click="detail('党建之窗')">烟台一中高一语文组举办2018年度硬笔书法</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <!-- 学生园地/教学科研/德育之窗 -->
+      <div class="row xsyd">
+        <div class="students shadow">
+          <div class="newtitle">
+            <p class="newnName">学生园地</p>
+            <p class="more" @click="more('德育之窗')">more&gt;&gt;</p>
+            <div class="clear"></div>
+          </div>
+          <ul class="news">
+            <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年度</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+          </ul>
+        </div>
+		  
+		          <div class="students shadow">
+          <div class="newtitle">
+            <p class="newnName">教育科研</p>
+            <p class="more" @click="more('德育之窗')">more&gt;&gt;</p>
+            <div class="clear"></div>
+          </div>
+          <ul class="news">
+            <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+          </ul>
+        </div>
+		          <div class="students shadow">
+          <div class="newtitle">
+            <p class="newnName">德育之窗</p>
+            <p class="more" @click="more('德育之窗')">more&gt;&gt;</p>
+            <div class="clear"></div>
+          </div>
+          <ul class="news">
+            <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+			         <li>
+              <span>烟台一中高一语文组举办2018年</span>
+              <span class="newTime">2017.02.03</span>
+            </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <!-- 平安校园/家校互动 -->
+      <div class="row">
+         <div class="safeCamp shadow">
+               <div class="newtitle">
+            <p class="newnName">平安校园</p>
+            <p class="more" @click="more(i.name)">more&gt;&gt;</p>
+            <div class="clear"></div>
+          </div>
+
+          <div class="topSafe">
+          <div class="safeImg"><img src="http://www.njjxjy.cn/uploadfile/404/20180621025756.jpg"></div>
+          <div class="safeDes"><p>做自己的首席安全官——平安校园行记}</p><p>3月26日是第23个“全国中小学生安全教育日。为提高学生的安全意识，深入地推动学校的安全教育工作，促进学生平安</p></div>
+          <div class="clear"></div>
+          </div>
+              <ul class="news">
+            <li>
+              <span>烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+              <span class="newTime">2017-01-02</span>
+            </li>
+				          <li>
+              <span>烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+              <span class="newTime">2017-01-02</span>
+            </li>
+				          <li>
+              <span>烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+              <span class="newTime">2017-01-02</span>
+            </li>
+				          <li>
+              <span>烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+              <span class="newTime">2017-01-02</span>
+            </li>        <li>
+              <span>烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+              <span class="newTime">2017-01-02</span>
+            </li>
+          </ul>
+         </div>
+		  
+		           <div class="safeCamp shadow">
+               <div class="newtitle">
+            <p class="newnName">家校互动</p>
+            <p class="more" @click="more(i.name)">more&gt;&gt;</p>
+            <div class="clear"></div>
+          </div>
+
+          <div class="topSafe">
+          <div class="safeImg"><img src="http://www.njjxjy.cn/uploadfile/404/20180621025756.jpg"></div>
+          <div class="safeDes"><p>做自己的首席安全官——平安校园行记</p><p>3月26日是第23个“全国中小学生安全教育日。为提高学生的安全意识，深入地推动学校的安全教育工作，促进学生平安</p></div>
+          <div class="clear"></div>
+          </div>
+              <ul class="news">
+            <li>
+              <span>烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+              <span class="newTime">2017-01-02</span>
+            </li>
+				     <li>
+              <span>烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+              <span class="newTime">2017-01-02</span>
+            </li>
+				     <li>
+              <span>烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+              <span class="newTime">2017-01-02</span>
+            </li>
+				     <li>
+              <span>烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+              <span class="newTime">2017-01-02</span>
+            </li>
+				     <li>
+              <span>烟台一中高一语文组举办2018年度硬笔书法比赛</span>
+              <span class="newTime">2017-01-02</span>
+            </li>
+			
+          </ul>
+         </div>
+            <div style="clear:both;"></div>
+      </div>
+      <!-- 教师风范 -->
+      <div class="teachers">
+                 <div class="newtitle" style="padding:20px 20px 10px 20px;">
+            <p class="newnName">教师风范</p>
+            <p class="more" @click="more('教师风范')">more&gt;&gt;</p>
+       <div style="clear:both;"></div>
+          </div>
+          <p class="line"></p>
+          <div>
+           <div class="honory">
+          <div class="honoryTitle">
+            <div class="honorName">张老师</div>
+            <img src="http://px9z2.px9z.com/uploadfile/2016/0413/thumb_531_314_20160413040629911.jpg" class="honorImg"></div>
+        </div>
+		      <div class="honory">
+          <div class="honoryTitle">
+            <div class="honorName">张老师</div>
+            <img src="http://px9z2.px9z.com/uploadfile/2016/0413/thumb_531_314_20160413040629911.jpg" class="honorImg"></div>
+        </div>
+		    <div class="honory">
+          <div class="honoryTitle">
+            <div class="honorName">张老师</div>
+            <img src="http://px9z2.px9z.com/uploadfile/2016/0413/thumb_531_314_20160413040629911.jpg" class="honorImg"></div>
+        </div>
+	    <div class="honory">
+          <div class="honoryTitle">
+            <div class="honorName">张老师</div>
+            <img src="http://px9z2.px9z.com/uploadfile/2016/0413/thumb_531_314_20160413040629911.jpg" class="honorImg"></div>
+        </div>
+
+	    <div class="honory">
+          <div class="honoryTitle">
+            <div class="honorName">张老师</div>
+            <img src="http://px9z2.px9z.com/uploadfile/2016/0413/thumb_531_314_20160413040629911.jpg" class="honorImg"></div>
+        </div>
+	    <div style="clear:both;"></div>
+          </div>
+      </div>
+      <!-- 友情链接 -->
+  <div class="teachers">
+                 <div class="newtitle" style="padding:20px 20px 10px 20px;">
+            <p class="newnName">友情链接</p>
+            <div class="clear"></div>
+          </div>
+          <p class="line"></p>
+          <div>
+          <div class="yqljimg"><img src="http://localhost:8080/static/img/link2.73675bd.jpg"></div>
+			       <div class="yqljimg"><img src="http://localhost:8080/static/img/link2.73675bd.jpg"></div>
+			       <div class="yqljimg"><img src="http://localhost:8080/static/img/link2.73675bd.jpg"></div>
+			       <div class="yqljimg"><img src="http://localhost:8080/static/img/link2.73675bd.jpg"></div>
+			       <div class="yqljimg"><img src="http://localhost:8080/static/img/link2.73675bd.jpg"></div>
+			       <div class="yqljimg"><img src="http://localhost:8080/static/img/link2.73675bd.jpg"></div>
+           <div class="clear"></div>
+          </div>
+  </div>
+    </div>
+	
+			<!--footer-->
+		<div style="text-align: center;background: #3d3d3d;color: #999; margin-top: 30px;padding: 24px 50px; font-size: 14px;">
+			<div>主办单位：烟台市科学技术局&nbsp;&nbsp;&nbsp;&nbsp;承办单位：烟台中科网络技术研究所</div>
+			<div><span><a target="_blank" href="http://www.miitbeian.gov.cn">鲁ICP备11026262号-7</a></span>&nbsp;&nbsp;&nbsp;&nbsp;©2018-2020 版权所有</div>
+			<div>地址：山东省烟台市高新区蓝海路1号&nbsp;&nbsp;邮编：264000&nbsp;&nbsp;电话：0535-8206434</div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			//学校概况移入移除事件
+	$("#xxgk").mouseover(function(){
+		$("#show-list").show();
+	});
+		$("#xxgk").mouseout(function(){
+		$("#show-list").hide();
+	})
+		//轮播banner
+		    var swiper = new Swiper('.banner-container', {
+				     loop: true,
+      autoplay:5000,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        effect: 'fade'
+    });
+			      // 通知公告的轮播
+       var noticepcswiper = new Swiper('.noticepc-container', {
+             loop: true,
+      autoplay:5000,
+      autoplayDisableOnInteraction : false,
+      preventClicks : true,
+       autoplayDisableOnInteraction : false,
+        direction: 'vertical',
+             observer:true,
+               effect: 'fade',
+    });
+		})
+	</script>
+
+<div class="layui-layer-move"></div></body></html>
