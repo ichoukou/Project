@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="zh-cn"><head>
+<meta charset="utf-8">
+<title>新建页面</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script src="//vuejs.org/js/vue.min.js"></script>
+<!-- import stylesheet -->
+<link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+	<style>
+		<!--全局css-->
+* { margin: 0; padding: 0;  word-break: break-all; word-wrap: break-word;box-sizing: border-box;}
+body,html {width: 100%;height: 100%;position: relative;}
+img {border: 0; max-width: 100%;}
+a {text-decoration: none;outline: none;}
+input,textarea {resize: none; outline: none;border: 0;}
+.clear {clear: both;}
+	<!--本业css-->
+.navlist {float: right;}
+.navlist li {float: left;margin-left: 25px;color: #fff;font-size: 16px; list-style:none;cursor:pointer;}
+.navlist>li>a{color:#fff;}
+#show-list {position: absolute;z-index: 999; top: 66px; left: -40px;}
+#show-list li {width: 90px; height: 40px;font-size: 14px; line-height: 40px; background:#fff;color:rgba(102, 51, 153, 0.8); border-bottom: 1px solid #bbb; padding-bottom: 0; text-align:center;}
+.intro li>a{color: rgba(102, 51, 153, 0.8)}
+	.ryzz_content {
+  text-align: center;
+}
+		.honorContent {
+  justify-content: space-between;
+  margin: 15px 4%;
+  flex-flow: row wrap;
+			width:1200px;
+}
+		.dbContainer{
+width:410px; margin: 0 auto;
+}
+.dbfont{
+  font-size: 100px;text-align:left;color: #ffffff;font-weight:normal; opacity: 0.9;text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);margin-bottom:20px;
+}
+@media screen and (max-width: 767px) {
+.dingbu{
+background-size:100% 100%;
+}
+.dbContainer{
+width:210px;
+}
+.dbfont{
+font-size: 50px;
+}
+}
+.honorContainer{
+ max-width:1200px;margin:0 auto;margin-top:15px;
+}
+@media screen and (max-width: 992px) {
+  .honorContainer{
+    padding:0 2%;
+    }
+}
+	</style>
+<!--XNX3HTMLEDIT--><script>var masterSiteUrl='http://localhost/'; var htmledit_upload_url='http://localhost:80/template/uploadImage.do?t=1550728657219'; </script><script src="http://res.weiunity.com/htmledit/htmledit.js"></script><script type="text/javascript" src="//res.weiunity.com/js/jquery-2.1.4.js"></script><script src="http://res.weiunity.com/smartMenu/jquery-smartMenu.js" type="text/javascript"></script><link href="http://res.weiunity.com/smartMenu/smartMenu.css" rel="stylesheet" type="text/css"><link href="http://res.weiunity.com/layer/skin/default/layer.css" rel="stylesheet" type="text/css"><script src="http://res.weiunity.com/layer/layer.js" type="text/javascript"></script><link href="http://res.weiunity.com/htmledit/htmledit.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="http://res.weiunity.com/layer/skin/default/layer.css?v=3.01172" id="layuicss-skinlayercss"></head>
+<body style="" contenteditable="true">
+
+  <div style="">
+{<!--templateVarStart--><!--templateVarName=header-->	<!--头部-->
+    <header style="width: 100%; background: url(&quot;&quot;) center top repeat scroll rgba(102, 51, 153, 0.8);">
+      <div style="width: 1200px; height: 100px; line-height: 100px; margin: 0px auto;">
+        <div style="padding-top: 20px; float: left; height: 100px;"><img src="http://www.qhfx.edu.cn/app/static/images/logo-white-260X53.png" style=""></div>
+        <ul class="navlist" style="float: right;">
+            <li @click="shouye()" style="">首页</li>
+            <li style="position: relative;" id="xxgk">学校概况
+        
+								<div id="show-list" style="display: none;">
+					<ul class="intro">
+						<li @click="xxry(2,'学校荣誉')">学校荣誉</li>
+             <li @click="detail(21,'组织机构')">组织机构</li>
+              <li @click="detail(22,'校风校训')">校风校训</li>
+             <li @click="detail(23,'学校简介')"> 学校简介</li>
+             <li @click="detail(24,'走进校园')"> 走进校园</li></ul>
+				</div>
+        </li>
+            <li @click="menus(2,'校园动态')" style="">校园动态</li>
+            <li @click="menus(3,'党建之窗')">党建之窗</li>
+            <li @click="xxry(3,'教师发展')">教师发展</li>
+            <li @click="menus(5,'学生园地')" style="">学生园地</li>
+            <li @click="menus(6,'教育科研')" style="">教育科研</li>
+            <li @click="menus(7,'德育之窗')">德育之窗</li>
+            <li @click="menus(8,'平安校园')" style="">平安校园</li>
+            <li @click="menus(9,'家校互动')">家校互动</li>
+        </ul>
+        <div style="clear:both;"></div>
+      </div>
+    </header><!--templateVarEnd-->}
+    <section style="background-image: url(&quot;http://www.qhfx.edu.cn/app/static/images/xy_img/dingbu21.jpg&quot;);" class="dingbu">
+    <div class="dbContainer">
+      <div class="dbfont" style="">学校荣誉</div>
+    </div>
+</section>
+
+<div class="honorContainer">
+<p>校长：任振勇</p><p>副校长：张川，徐梅</p>
+</div>
+  </div>
+
+
+
+</body></html>
