@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+    <title>学校简介_测试演示自定义模版站</title>
+    <meta name="keywords" content="学校简介,测试演示的自定义模版站" />
+	<meta name="description" content="学校简介" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	
+	<!-- jQuery WeUI -->
+	<script src="http://localhost:80/js/jquery-2.1.4.js"></script>
+	<script src="http://localhost:80/js/jquery-weui.js"></script>
+	<link rel="stylesheet" href="http://localhost:80/css/weui.min.css">
+	<link rel="stylesheet" href="http://localhost:80/css/jquery-weui.css">
+	
+	<!-- DOM操作 -->
+	<script src="http://localhost:80/js/HTML.min.js"></script>
+	
+	<!-- 站点信息缓存 -->
+	<script src="http://localhost:80/site/219/data/site.js"></script>
+	<script src="http://localhost:80/site/219/data/siteColumn.js"></script>
+	
+	<!-- 模版的加载都是动态加载，在下面js里 -->
+<script type="text/javascript">
+//当前的时间戳
+var time=new Date().getTime();
+//设置OSSUtil.url
+var OSSUrl = 'http://localhost:80/';
+//主站URL
+var masterSiteUrl = 'http://localhost/';
+//资源文件主URL
+var resPath = 'http://localhost:80/';
+
+//设置顶部title区块的标题内容
+function setTitle(t){
+	document.getElementById('title').innerHTML = t;
+}
+
+//是否是编辑模式下
+var edit = '' == 'edit';
+
+//动态加载js、css文件
+var dynamicLoading = {
+	css: function(path){
+		if(!path || path.length === 0){
+			throw new Error('argument "path" is required !');
+		}
+		var head = document.getElementsByTagName('head')[0];
+		var link = document.createElement('link');
+		link.href = path+'?v='+time;
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		head.appendChild(link);
+	},
+	js: function(path){
+		if(!path || path.length === 0){
+			throw new Error('argument "path" is required !');
+		}
+		var head = document.getElementsByTagName('head')[0];
+		var script = document.createElement('script');
+		script.src = path;
+		script.type = 'text/javascript';
+		head.appendChild(script);
+	}
+}
+
+//获取当前所用模版的编号
+function getTemplateId(){
+	if(typeof(site) != "undefined"){
+		return site['templateId'];
+	}else{
+		return '1';
+	}
+}
+
+dynamicLoading.css("http://localhost:80/template/"+getTemplateId()+"/style.css");
+
+if(edit){
+	dynamicLoading.css("http://localhost:80/template/"+getTemplateId()+"/styleedit.css");
+}
+</script>
+</head>
+
+<style>
+img{
+	max-width: 100%;
+}
+</style>
+<body>
+<!-- 网站顶部的标题栏 -->
+<div id="topBlock">
+	<div id="topBlock_back" onclick="history.go(-1);">
+		<img src="http://localhost:80//image/loading.svg" id="img_back">
+	</div>
+	<div id="title" onclick="site_();">
+		学校简介_测试演示自定义模版站
+	</div>
+	
+</div>
+<script type="text/javascript">
+	document.getElementById("img_back").src='http://localhost:80/template/'+getTemplateId()+'/image/back.png';
+</script>
+
+<script type="text/javascript">
+	setTitle('学校简介');
+</script>
+<div class="news_text">学校简介</div>
+<!-- 网站尾部，尾部导航。尾部的数据也是用js动态填充的( wapedit.js initFooter(); )，宽度会自动计算填充数据，填充满整个宽度 -->
+<!-- 此模版必须存在 -->
+<div id="footer">
+</div>
+<script type="text/javascript">
+dynamicLoading.js("http://localhost:80/js/wap/wap.js");
+</script>
+
+</body>
+</html>

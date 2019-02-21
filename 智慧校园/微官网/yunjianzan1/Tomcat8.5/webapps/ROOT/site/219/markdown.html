@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="zh-cn"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>markdown栏目_测试演示自定义模版站</title>
+
+    <script src="http://res.weiunity.com/js/jquery-2.1.4.js"></script>
+        <script src="http://res.weiunity.com/editor/lib/marked.min.js"></script>
+        <script src="http://res.weiunity.com/editor/lib/prettify.min.js"></script>
+        <script src="http://res.weiunity.com/editor/lib/raphael.min.js"></script>
+        <script src="http://res.weiunity.com/editor/lib/underscore.min.js"></script>
+        <script src="http://res.weiunity.com/editor/lib/sequence-diagram.min.js"></script>
+        <script src="http://res.weiunity.com/editor/lib/flowchart.min.js"></script>
+        <script src="http://res.weiunity.com/editor/lib/jquery.flowchart.min.js"></script>
+        <script src="http://res.weiunity.com/editor/editormd.js"></script>
+    <link href="http://res.weiunity.com/editor/css/editormd.css" rel="stylesheet">
+
+
+</head>
+<body style="">
+
+
+
+<!-- 您可以自行在此处定义您的页面头部显示的内容 -->
+
+
+
+<style>
+#iw_title{
+  padding-bottom: 50px;
+    border-bottom: 0px;
+    text-align:center;
+}
+  #wangmarket_waikuang{
+        font-size: 16px;
+    line-height: 1.5;
+    color: rgb(36, 41, 46);
+    min-height: 500px;
+    padding-top: 70px;
+  }
+
+@media (min-width: 830px){
+  #wangmarket_waikuang{
+    width: 800px; margin: 30px auto 50px; font-size: 16px; line-height: 1.5; color: rgb(36, 41, 46); min-height: 700px; padding-left: 100px; padding-right: 100px; padding-top: 70px; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 10px 2px;
+  }
+}
+</style>
+<div id="source" style="display:none;">
+ <textarea style="display:none;" name="text" id="markdownText">markdown栏目</textarea>
+</div>
+<div class="markdown-body editormd-html-preview" id="wangmarket_waikuang" style="">
+<h1 id="iw_title" style="">markdown栏目</h1>
+<div id="preview" class="markdown-body editormd-html-preview" style=""><p style="">markdown栏目</p>
+</div>
+
+</div>
+
+<script type="text/javascript">
+    document.getElementById('preview').innerHTML='';
+
+    function init(){
+        testEditormdView = editormd.markdownToHTML("preview", {
+                markdown        :  document.getElementById('markdownText').value,
+                //htmlDecode      : true,       // 开启 HTML 标签解析，为了安全性，默认不开启
+                htmlDecode      : "style,script,iframe",  // you can filter tags decode
+                //toc             : false,
+                tocm            : true,    // Using [TOCM]
+                //tocContainer    : "#custom-toc-container", // 自定义 ToC 容器层
+                //gfm             : false,
+                //tocDropdown     : true,
+                // markdownSourceCode : true, // 是否保留 Markdown 源码，即是否删除保存源码的 Textarea 标签
+                emoji           : true,
+                taskList        : true,
+                tex             : true,  // 默认不解析
+                flowChart       : true,  // 默认不解析
+                sequenceDiagram : true,  // 默认不解析
+            });
+            
+            //console.log("返回一个 jQuery 实例 =>", testEditormdView);
+            
+            // 获取Markdown源码
+            //console.log(testEditormdView.getMarkdown());
+            
+            //alert(testEditormdView.getMarkdown());
+
+        testEditormdView2 = editormd.markdownToHTML("test-editormd-view2", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+        });
+
+    }
+
+    init();
+</script>
+
+
+
+<!-- 您可以自行在此处定义您的页面底部显示的内容 -->
+
+
+</body></html>
