@@ -85,6 +85,18 @@
 	<priority>0.4</priority>
 </url>
 <url>
+	<loc>http://cs.wang.market/42.html</loc>
+	<priority>0.5</priority>
+</url>
+<url>
+	<loc>http://cs.wang.market/41.html</loc>
+	<priority>0.5</priority>
+</url>
+<url>
+	<loc>http://cs.wang.market/40.html</loc>
+	<priority>0.5</priority>
+</url>
+<url>
 	<loc>http://cs.wang.market/39.html</loc>
 	<priority>0.5</priority>
 </url>
