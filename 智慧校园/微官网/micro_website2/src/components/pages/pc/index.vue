@@ -1,9 +1,9 @@
 <template>
   <div >
-<div style="width:100%;height:auto;position:relative">
+<div class="banner_pc">
  <Carousel autoplay v-model="value2" loop :autoplay-speed="autoplaySpeed" height="450px">
         <CarouselItem v-for="(item,index) in bannerList">
-            <div class="demo-carousel" style="position:relative;border:1px solid #000">
+            <div class="demo-carousel" style="position:relative;">
               <img :src="item.img" style="width:100%">
                    <p class="swiperTitle">{{item.title}}</p>
             </div>
@@ -229,10 +229,18 @@ noticepcswiper.update();
 };
 </script>
 <style>
-/* .bannerpc-container img{
-width:100%!important;
-height:100%!important;
-} */
+/* button对应首页轮播图下方轮播条，此处设置非选中状态的样式,默认宽高是16、3，颜色是灰色，透明度是0.3*/
+.banner_pc .ivu-carousel-dots li button {
+  width: 30px !important;
+  height: 2px !important;
+  background: #fff !important;
+}
+/* ivu-carousel-active为轮播条为选中状态时，默认宽变为是24，颜色是灰色，透明度变为1、高不变*/
+.banner_pc .ivu-carousel-dots li.ivu-carousel-active > button {
+  height: 3px !important;
+  width: 50px !important;
+  background: #fff !important;
+}
 .bannerpc-container  {
   top: -30px !important;
  height:450px!important;
