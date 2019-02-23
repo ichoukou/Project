@@ -73,6 +73,10 @@
 	<priority>0.5</priority>
 </url>
 <url>
+	<loc>http://cs.wang.market/new.html</loc>
+	<priority>0.4</priority>
+</url>
+<url>
 	<loc>http://cs.wang.market/xueshengyuandi.html</loc>
 	<priority>0.4</priority>
 </url>

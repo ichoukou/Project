@@ -61,8 +61,8 @@ font-size: 50px;
 <body style="">
 
   <div style="">
-{<!--templateVarStart--><!--templateVarName=header-->	<!--头部-->
-    <header style="width: 100%; background: url(&quot;&quot;) center top repeat scroll rgba(102, 51, 153, 0.8);">
+<!--templateVarStart--><!--templateVarName=header-->	<!--头部-->
+    <header style="width: 100%; background: url(&quot;&quot;) center top repeat scroll rgba(102, 51, 153, 0.8);" id="headContainer">
       <div style="width: 1200px; height: 100px; line-height: 100px; margin: 0px auto;">
         <div style="padding-top: 20px; float: left; height: 100px;"><img src="http://www.qhfx.edu.cn/app/static/images/logo-white-260X53.png" style=""></div>
         <ul class="navlist" style="float: right;">
@@ -89,7 +89,7 @@ font-size: 50px;
         </ul>
         <div style="clear:both;"></div>
       </div>
-    </header><!--templateVarEnd-->}
+    </header><!--templateVarEnd-->
     <section style="background-image: url(&quot;http://www.qhfx.edu.cn/app/static/images/xy_img/dingbu21.jpg&quot;);" class="dingbu">
     <div class="dbContainer">
       <div class="dbfont" style="">学校荣誉</div>
@@ -97,7 +97,7 @@ font-size: 50px;
 </section>
 
 <div class="honorContainer" style="">
-<p>平安校园</p>
+<p><img width="530" height="340" src="http://api.map.baidu.com/staticimage?center=121.200847,37.613645&zoom=10&width=530&height=340&markers=116.404,39.915"/>平安校园</p>
 </div>
   </div>
 
@@ -114,6 +114,10 @@ font-size: 50px;
 		$("#xxgk").mouseout(function(){
 		$("#show-list").hide();
 	})
+				if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone|iPad)/i))) {
+    $("#headContainer").hide();
+$(".dingbu").hide();
+}
 	});
 	</script>
 	

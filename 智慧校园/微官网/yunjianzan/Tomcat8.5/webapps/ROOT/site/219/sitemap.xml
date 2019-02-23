@@ -73,12 +73,28 @@
 	<priority>0.5</priority>
 </url>
 <url>
+	<loc>http://cs.wang.market/tongzhigonggao.html</loc>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>http://cs.wang.market/44.html</loc>
+	<priority>0.5</priority>
+</url>
+<url>
+	<loc>http://cs.wang.market/43.html</loc>
+	<priority>0.5</priority>
+</url>
+<url>
 	<loc>http://cs.wang.market/deyuzhichuang.html</loc>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>http://cs.wang.market/35.html</loc>
 	<priority>0.5</priority>
+</url>
+<url>
+	<loc>http://cs.wang.market/m_xuexiaogaikuang.html</loc>
+	<priority>0.4</priority>
 </url>
 <url>
 	<loc>http://cs.wang.market/jiaoshifazhan.html</loc>
@@ -109,47 +125,7 @@
 	<priority>0.4</priority>
 </url>
 <url>
-	<loc>http://cs.wang.market/19.html</loc>
-	<priority>0.5</priority>
-</url>
-<url>
-	<loc>http://cs.wang.market/18.html</loc>
-	<priority>0.5</priority>
-</url>
-<url>
-	<loc>http://cs.wang.market/17.html</loc>
-	<priority>0.5</priority>
-</url>
-<url>
-	<loc>http://cs.wang.market/16.html</loc>
-	<priority>0.5</priority>
-</url>
-<url>
-	<loc>http://cs.wang.market/15.html</loc>
-	<priority>0.5</priority>
-</url>
-<url>
-	<loc>http://cs.wang.market/14.html</loc>
-	<priority>0.5</priority>
-</url>
-<url>
-	<loc>http://cs.wang.market/13.html</loc>
-	<priority>0.5</priority>
-</url>
-<url>
-	<loc>http://cs.wang.market/12.html</loc>
-	<priority>0.5</priority>
-</url>
-<url>
-	<loc>http://cs.wang.market/11.html</loc>
-	<priority>0.5</priority>
-</url>
-<url>
-	<loc>http://cs.wang.market/10.html</loc>
-	<priority>0.5</priority>
-</url>
-<url>
-	<loc>http://cs.wang.market/9.html</loc>
+	<loc>http://cs.wang.market/46.html</loc>
 	<priority>0.5</priority>
 </url>
 <url>
