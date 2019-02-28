@@ -1,0 +1,12 @@
+28-Feb-2019 08:19:19.818 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log 2 Spring WebApplicationInitializers detected on classpath
+28-Feb-2019 08:19:25.273 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring embedded WebApplicationContext
+28-Feb-2019 08:20:14.180 信息 [http-nio-80-exec-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcherServlet'
+28-Feb-2019 08:24:52.819 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log 2 Spring WebApplicationInitializers detected on classpath
+28-Feb-2019 08:24:57.139 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring embedded WebApplicationContext
+28-Feb-2019 08:25:09.396 信息 [http-nio-80-exec-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcherServlet'
+28-Feb-2019 12:40:44.318 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log 2 Spring WebApplicationInitializers detected on classpath
+28-Feb-2019 12:40:48.817 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring embedded WebApplicationContext
+28-Feb-2019 12:41:20.219 信息 [http-nio-80-exec-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcherServlet'
+28-Feb-2019 13:29:47.460 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log 2 Spring WebApplicationInitializers detected on classpath
+28-Feb-2019 13:29:52.087 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring embedded WebApplicationContext
+28-Feb-2019 13:30:06.192 信息 [http-nio-80-exec-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'dispatcherServlet'
